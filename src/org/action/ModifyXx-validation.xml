@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+<!--需要校验的字段的字段名-->
+<field name="xm">
+	<!--验证字符串不能为空，即必填-->
+	<field-validator type="requiredstring">
+		<!--去空格-->
+		<param name="trim">true</param>
+		<!--错误提示信息-->
+		<message>姓名是必需的！</message>
+	</field-validator>
+</field>
+<field name="xh">
+	<field-validator type="requiredstring">
+		<!--去空格-->
+		<param name="trim">true</param>
+		<!--错误提示信息-->
+		<message>学号是必需的！</message>
+	</field-validator>
+	<field-validator type="stringlength">
+	<param name="trim">true</param>
+	<param name="minLength">6</param>
+	<param name="maxLength">6</param>
+	<message>学号长度必须为6位！</message>
+	</field-validator>	
+</field>
+
+<field name="zyId">
+	<field-validator type="required">
+		<!--错误提示信息-->
+		<message>专业代号是必需的！</message>
+	</field-validator>
+</field>
+
+<field name="csrq">
+	<field-validator type="required">
+		<!--错误提示信息-->
+		<message>日期是必需的！</message>
+	</field-validator>
+	<field-validator type="date">
+			<!--日期最小值-->
+			<param name="min">1980-01-01</param>
+			<!--日期最大值-->
+			<param name="max">2017-03-15</param>
+			<!--错误提示信息-->
+			<message>日期必须在1980-01-01至2016-3-15之间</message>
+		</field-validator>
+	
+</field>
+</validators>

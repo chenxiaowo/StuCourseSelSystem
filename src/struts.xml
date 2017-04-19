@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="default" extends="struts-default">
+	
+	<interceptors>
+		<interceptor name="loginInterceptor" class="org.interceptor.LoginInterceptor"></interceptor>
+		<interceptor-stack name="loginStack">
+			<interceptor-ref name="loginInterceptor">
+				<param name="excludeMethods">login</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</interceptor-stack>
+	</interceptors>
+	
+	<default-interceptor-ref name="loginStack"></default-interceptor-ref>
+		<!--这里以后添加Action配置，后面配置的Action都要添加在这里-->
+		<action name="login" class="org.action.LoginAction">
+			<result name="success">/frame.jsp</result>
+			<result name="error">/login.jsp</result>
+			<result name="input">/login.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+		
+		<action name="showXx" class="org.action.ShowXx">
+			<result name="success">/xx.jsp</result>
+			<result name="error">/main.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+
+		<action name="modifyXx" class="org.action.ModifyXx">
+			<result name="success">/xx.jsp</result>
+			<result name="error">/main.jsp</result>
+			<result name="input">/xg.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+		
+		<action name="personXk" class="org.action.PersonXk">
+			<result name="success">/gr.jsp</result>
+			<result name="error">/main.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+		
+		<action name="allKc" class="org.action.AllKc">
+			<result name="success">/xk.jsp</result>
+			<result name="error">/main.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+
+		<action name="selectkc" class="org.action.SelectKc">
+			<result name="success">/sesucess.jsp</result>
+			<result name="error">/xk.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+	
+		<action name="deleteKc" class="org.action.DeleteKc">
+			<result name="success">/delsucess.jsp</result>
+			<result name="error">/xk.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+		<action name="upload" class="org.action.UploadAction">
+			<result name="success">/xx.jsp</result>
+			<result name="error">/xk.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+	
+	
+	
+	</package>
+</struts>

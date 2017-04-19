@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="0,0" size="0,0">
+    <action name="login" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="frame.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="login.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="showXx" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="xx.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="main.jsp" />
+      </result>
+    </action>
+    <action name="modifyXx" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="xx.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="main.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="xg.jsp" />
+      </result>
+    </action>
+    <action name="personXk" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="gr.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="main.jsp" />
+      </result>
+    </action>
+    <action name="allKc" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="xk.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="main.jsp" />
+      </result>
+    </action>
+    <action name="selectkc" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="sesucess.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="xk.jsp" />
+      </result>
+    </action>
+    <action name="deleteKc" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="delsucess.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="xk.jsp" />
+      </result>
+    </action>
+    <action name="upload" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="xx.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="xk.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="main.jsp" path="/main.jsp" location="0,0" size="0,0" />
+  <webResource name="login.jsp" path="/login.jsp" location="0,0" size="0,0" />
+  <webResource name="xx.jsp" path="/xx.jsp" location="0,0" size="0,0" />
+  <webResource name="xg.jsp" path="/xg.jsp" location="0,0" size="0,0" />
+  <webResource name="gr.jsp" path="/gr.jsp" location="0,0" size="0,0" />
+  <webResource name="xk.jsp" path="/xk.jsp" location="0,0" size="0,0" />
+  <webResource name="test.jsp" path="/test.jsp" location="0,0" size="0,0" />
+  <webResource name="sesucess.jsp" path="/sesucess.jsp" location="0,0" size="0,0" />
+  <webResource name="delsucess.jsp" path="/delsucess.jsp" location="0,0" size="0,0" />
+  <webResource name="frame.jsp" path="/frame.jsp" location="0,0" size="0,0" />
+  <webResource name="right.jsp" path="/right.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+
